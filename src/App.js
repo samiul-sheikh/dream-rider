@@ -1,11 +1,36 @@
 import './App.css';
+import Homepage from './Components/Homepage/Homepage';
+import Login from './Components/Login/Login';
+import Registration from './Components/Registration/Registration';
+import RidesInfo from './Components/RidesInfo/RidesInfo';
+import NoMatch from './Components/NoMatch/NoMatch';
+import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-
-    </div>
-  );
+    return (
+        <Router>
+            <Switch>
+                <Route exact path="/">
+                    <Homepage />
+                </Route>
+                <Route path="/home">
+                    <Homepage />
+                </Route>
+                <Route path="/login">
+                    <Login />
+                </Route>
+                <Route path="/registration">
+                    <Registration />
+                </Route>
+                <Route path="/ridesInfo">
+                    <RidesInfo />
+                </Route>
+                <Route path="*">
+                    <NoMatch />
+                </Route>
+            </Switch>
+        </Router>
+    );
 }
 
 export default App;
