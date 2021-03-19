@@ -1,0 +1,31 @@
+[
+    {
+        "id": 10,
+        "name": "Bike",
+        "country": "Bangladesh",
+        "cost": 300,
+        "image": "https://ibb.co/92r758f"
+
+    },
+    {
+        "id": 50,
+        "name": "Car",
+        "country": "Bangladesh",
+        "cost": 500,
+        "image": "https://ibb.co/6YMq6wt"
+    },
+    {
+        "id": 20,
+        "name": "Bus",
+        "country": "Bangladesh",
+        "cost": 200,
+        "image": "https://ibb.co/FzK2h4K"
+    },
+    {
+        "id": 15,
+        "name": "Train",
+        "country": "Bangladesh",
+        "cost": 150,
+        "image": "https://ibb.co/z5j9w2D"
+    }
+]
