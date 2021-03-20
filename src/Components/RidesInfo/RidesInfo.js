@@ -18,9 +18,10 @@ const RidesInfo = () => {
 
     return (
         <div className="row">
-            <div className="col-md-6">
-                <h1>This is Rides Info: {name}</h1>
+            <div className="col-md-6" style={{ textAlign: 'center' }}>
+                <h1>Your Rides Type: {name}</h1>
                 <p>cost: {setRide.cost}</p>
+                <img src={setRide.image} alt="" />
             </div>
             <div className="col-md-6">
                 <img src={map} alt="" />

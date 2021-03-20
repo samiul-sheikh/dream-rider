@@ -17,28 +17,28 @@ function App() {
     const [loggedInUser, setLoggedInUser] = useState({});
 
     return (
-        <UserContext.Provider value = {[loggedInUser, setLoggedInUser]}>
-        <Router>
-            <h4>e-mail: {loggedInUser.email}</h4>
-            <Header />
-            <Switch>
-                <Route exact path="/">
-                    <Homepage />
-                </Route>
-                <Route path="/home">
-                    <Homepage />
-                </Route>
-                <Route path="/login">
-                    <Login />
-                </Route>
-                <PrivateRoute path="/hire/:name">
-                    <RidesInfo />
-                </PrivateRoute>
-                <Route path="*">
-                    <NoMatch />
-                </Route>
-            </Switch>
-        </Router>
+        <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+            <Router>
+                <p>user: {loggedInUser.email}</p>
+                <Header />
+                <Switch>
+                    <Route exact path="/">
+                        <Homepage />
+                    </Route>
+                    <Route path="/home">
+                        <Homepage />
+                    </Route>
+                    <Route path="/login">
+                        <Login />
+                    </Route>
+                    <PrivateRoute path="/hire/:name">
+                        <RidesInfo />
+                    </PrivateRoute>
+                    <Route path="*">
+                        <NoMatch />
+                    </Route>
+                </Switch>
+            </Router>
         </UserContext.Provider>
     );
 }

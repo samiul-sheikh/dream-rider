@@ -14,10 +14,10 @@ const HireCategory = (props) => {
     }
 
     return (
-        <div className="col-md-3">
-            <Card onClick={() => hireType(name)} style={{ width: '18rem' }}>
+        <div className="col-md-3" >
+            <Card onClick={() => hireType(name)} style={{ width: '18rem', marginLeft:'50px' }}>
                 <Card.Img variant="top" src={image} />
-                <Card.Body>
+                <Card.Body style={{textAlign: 'center'}}>
                     <Card.Title>{name}</Card.Title>
                     <Button onClick={() => hireType(name)}>Hire {name}</Button>
                 </Card.Body>

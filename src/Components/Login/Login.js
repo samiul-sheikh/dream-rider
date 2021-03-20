@@ -144,7 +144,7 @@ function Login() {
         <div style={{ textAlign: 'center' }}>
             {
                 user.isSignedIn ? <button onClick={handleSignOut}>sign out</button> :
-                    <button onClick={handleSignIn}>sign In</button>
+                    <button onClick={handleSignIn}>sign In using Google</button>
             }
             {
                 user.isSignedIn && <div>

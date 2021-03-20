@@ -14,7 +14,9 @@ const Homepage = () => {
 
     return (
         <div className="home" style={{ backgroundImage: `url(${bgImage})` }}>
-            <h2>Total Rides Type: {ridesType.length}</h2>
+            <div style={{textAlign: 'center', marginBottom:'40px'}}>
+                <h1>Welcome To Dream Rider....</h1>
+            </div>
             <div className="row">
                 {
                     ridesType.map(rides => <HireCategory rides={rides}></HireCategory>)
