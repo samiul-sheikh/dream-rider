@@ -14,7 +14,6 @@ const Homepage = () => {
 
     return (
         <div className="home" style={{ backgroundImage: `url(${bgImage})` }}>
-            <h1>This is Homepage</h1>
             <h2>Total Rides Type: {ridesType.length}</h2>
             <div className="row">
                 {

@@ -18,9 +18,6 @@ const Header = () => {
                         <Nav.Item>
                             <Nav.Link href="/login">Sign in</Nav.Link>
                         </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link href="/login">Sign up</Nav.Link>
-                        </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
