@@ -24,7 +24,7 @@ function App() {
                 <Route path="/registration">
                     <Registration />
                 </Route>
-                <Route path="/ridesInfo">
+                <Route path="/hire/:name">
                     <RidesInfo />
                 </Route>
                 <Route path="*">
