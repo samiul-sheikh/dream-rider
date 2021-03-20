@@ -1,7 +1,8 @@
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from '../../Firebase/firebase.config';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { UserContext } from "../../App";
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
@@ -18,6 +19,8 @@ function Login() {
         photo: ''
     })
 
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
     const provider = new firebase.auth.GoogleAuthProvider();
 
     const handleSignIn = () => {
@@ -32,6 +35,7 @@ function Login() {
                     photo: photoURL
                 }
                 setUser(signedInUser);
+                setLoggedInUser(signedInUser);
                 console.log(displayName, email, photoURL);
             })
             .catch(error => {
@@ -103,6 +107,7 @@ function Login() {
                     newUserInfo.error = '';
                     newUserInfo.success = true;
                     setUser(newUserInfo);
+                    setLoggedInUser(newUserInfo);
                     console.log('sign in user info', response.user);
                 })
                 .catch((error) => {

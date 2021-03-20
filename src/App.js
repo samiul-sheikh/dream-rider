@@ -6,10 +6,18 @@ import Registration from './Components/Registration/Registration';
 import RidesInfo from './Components/RidesInfo/RidesInfo';
 import NoMatch from './Components/NoMatch/NoMatch';
 import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
+import { createContext, useState } from 'react';
+
+export const UserContext = createContext();
 
 function App() {
+
+    const [loggedInUser, setLoggedInUser] = useState({});
+
     return (
+        <UserContext.Provider value = {[loggedInUser, setLoggedInUser]}>
         <Router>
+            <h4>e-mail: {loggedInUser.email}</h4>
             <Header />
             <Switch>
                 <Route exact path="/">
@@ -32,6 +40,7 @@ function App() {
                 </Route>
             </Switch>
         </Router>
+        </UserContext.Provider>
     );
 }
 
