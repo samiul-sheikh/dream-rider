@@ -7,6 +7,7 @@ import RidesInfo from './Components/RidesInfo/RidesInfo';
 import NoMatch from './Components/NoMatch/NoMatch';
 import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
 import { createContext, useState } from 'react';
+import PrivateRoute from './Components/PrivateRoute.js/PrivateRoute';
 
 export const UserContext = createContext();
 
@@ -29,12 +30,12 @@ function App() {
                 <Route path="/login">
                     <Login />
                 </Route>
-                <Route path="/registration">
+                <Route path="/login">
                     <Registration />
                 </Route>
-                <Route path="/hire/:name">
+                <PrivateRoute path="/hire/:name">
                     <RidesInfo />
-                </Route>
+                </PrivateRoute>
                 <Route path="*">
                     <NoMatch />
                 </Route>

@@ -19,7 +19,7 @@ const Header = () => {
                             <Nav.Link href="/login">Sign in</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link href="/registration">Sign up</Nav.Link>
+                            <Nav.Link href="/login">Sign up</Nav.Link>
                         </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>
