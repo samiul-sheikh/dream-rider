@@ -8,6 +8,8 @@ const RidesInfo = () => {
 
     const [ridesInfo, setRidesInfo] = useState({})
 
+    const setRide = RidersData.find(ride => ride.name === name)
+
     useEffect(() => {
         setRidesInfo(RidersData);
         console.log(RidersData);
@@ -16,7 +18,7 @@ const RidesInfo = () => {
     return (
         <div>
             <h1>This is Rides Info: {name}</h1>
-            <p>cost: {ridesInfo.cost}</p>
+            <p>cost: {setRide.cost}</p>
         </div>
     );
 };

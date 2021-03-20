@@ -16,9 +16,11 @@ const Homepage = () => {
         <div className="home" style={{ backgroundImage: `url(${bgImage})` }}>
             <h1>This is Homepage</h1>
             <h2>Total Rides Type: {ridesType.length}</h2>
-            {
-                ridesType.map(rides => <HireCategory rides={rides}></HireCategory>)
-            }
+            <div className="row">
+                {
+                    ridesType.map(rides => <HireCategory rides={rides}></HireCategory>)
+                }
+            </div>
         </div>
     );
 };

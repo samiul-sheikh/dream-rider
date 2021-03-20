@@ -1,9 +1,10 @@
 import React from 'react';
+import { Button, Card } from 'react-bootstrap';
 import { useHistory } from 'react-router';
 
 const HireCategory = (props) => {
     console.log(props.rides);
-    const { name, cost } = props.rides;
+    const { image, name } = props.rides;
 
     const history = useHistory();
 
@@ -13,12 +14,14 @@ const HireCategory = (props) => {
     }
 
     return (
-        <div style={{ border: '1px solid blue', margin: '20px' }}>
-            <div>
-                <h1>{name}</h1>
-                <h2>{cost}</h2>
-                <button onClick={() => hireType(name)}>Hire {name}</button>
-            </div>
+        <div className="col-md-3">
+            <Card onClick={() => hireType(name)} style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={image} />
+                <Card.Body>
+                    <Card.Title>{name}</Card.Title>
+                    <Button onClick={() => hireType(name)}>Hire {name}</Button>
+                </Card.Body>
+            </Card>
         </div>
     );
 };
