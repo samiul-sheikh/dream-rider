@@ -153,8 +153,7 @@ function Login() {
                     <img src={user.photo} alt="" />
                 </div>
             }
-
-            <h1>Our own authentication</h1>
+            <br/>
             <input type="checkbox" onChange={() => setNewUser(!newUser)} name="newUser" id="" />
             <label htmlFor="newUser">new user sign up</label>
             <form onSubmit={handleSubmit}>
