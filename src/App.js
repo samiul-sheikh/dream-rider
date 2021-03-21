@@ -2,13 +2,11 @@ import './App.css';
 import Header from './Components/Header/Header';
 import Homepage from './Components/Homepage/Homepage';
 import Login from './Components/Login/Login';
-import Registration from './Components/Registration/Registration';
 import RidesInfo from './Components/RidesInfo/RidesInfo';
 import NoMatch from './Components/NoMatch/NoMatch';
 import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
 import { createContext, useState } from 'react';
 import PrivateRoute from './Components/PrivateRoute.js/PrivateRoute';
-import AboutUs from './Components/AboutUs/AboutUs';
 
 export const UserContext = createContext();
 
